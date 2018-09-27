@@ -8,6 +8,8 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster+Two">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- Icon -->
     <link rel="shortcut icon" href="images/faviconC.png" type="image/x-icon">
     <!-- stylesheets -->
@@ -18,28 +20,52 @@
 <body>
     <header>
         <h1><img class="animated fadeIn" src="images/cinnabon.png" alt="Cinnabon"></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Coffee</a></li>
+                <li><a href="#">Latte</a></li>
+                <li><a href="#">Beverage</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="bakeX animated bounceInLeft"></div>
-    <div id="my-div">
-        <section>
-            <h2>Coffee House <span class="price">$2.5</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Commodi omnis recusandae eaque illum voluptates culpa voluptatibus eos! Sint sed, aliquid, ex accusantium iusto,
-                autem enim eum ipsam pariatur accusamus quibusdam?</p>
-        </section>
-    </div>
-    <div id="my-div2" class="coffeeX animated bounceInRight">
-        <section>
-            <h2>Latte Cafe <span class="price">$3.00</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Commodi omnis recusandae eaque illum voluptates culpa voluptatibus eos! Sint sed, aliquid, ex accusantium iusto,
-                autem enim eum ipsam pariatur accusamus quibusdam?</p>
-        </section>
-    </div>
-    <div class="drinkX">
-        <img class="animated bounceInLeft" src="images/c5.jpg" alt="">
-        <img class="animated bounceInRight" src="images/c6.jpg" alt="">
-    </div>
+    <main class="containerX">
+        <aside id="menu" class="menu" onclick="openMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </aside>
+        <nav id="sideMenu">
+            <ul>
+                <li><a href="#">SideNav</a></li>
+                <li><a href="#">SideNav</a></li>
+                <li><a href="#">SideNav</a></li>
+                <li><a href="#">SideNav</a></li>
+            </ul>
+        </nav>
+        <span onclick="goTop()" id="topX">&#8911;</span>
+        <div class="bakeX animated bounceInLeft"></div>
+        <div id="my-div">
+            <section>
+                <h2>Coffee House <span class="price">$2.5</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Commodi omnis recusandae eaque illum voluptates culpa voluptatibus eos! Sint sed, aliquid, ex accusantium iusto,
+                    autem enim eum ipsam pariatur accusamus quibusdam?</p>
+            </section>
+        </div>
+        <div id="my-div2" class="coffeeX animated bounceInRight">
+            <section>
+                <h2>Latte Cafe <span class="price">$3.00</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Commodi omnis recusandae eaque illum voluptates culpa voluptatibus eos! Sint sed, aliquid, ex accusantium iusto,
+                    autem enim eum ipsam pariatur accusamus quibusdam?</p>
+            </section>
+        </div>
+        <div class="drinkX">
+            <img class="animated bounceInLeft" src="images/c5.jpg" alt="">
+            <img class="animated bounceInRight" src="images/c6.jpg" alt="">
+        </div>
+    </main>
     <footer>Copyright © 2018 X-Team Inc. All rights reserved.</footer>
     <script src="script/script.js"></script>
 </body>

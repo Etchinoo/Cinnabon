@@ -1,3 +1,10 @@
+*{
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+}
+html {
+    scroll-behavior: smooth;
+}
 body{
     max-width: 900px;
     margin: 0 auto;
@@ -12,9 +19,107 @@ body{
     text-shadow: 2px 2px 4px #000;
     
 }
-
+window.scroll{
+    behavior: smooth;
+}
 header{
     text-align: center;
+}
+ul{
+    margin-bottom: 0 ;
+    padding: 5px;
+    border-radius: 7px;
+    background: rgba(230, 181, 126, 0.5);
+    list-style-type: none;
+}
+li{
+    display: inline;
+}
+ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Lobster Two', cursive;
+    padding: 0 20px;
+}
+ul a:hover{
+    font-size: 22px;
+}
+.containerX{
+    background: none;
+}
+#menu {
+    padding: 2px;
+    border-radius: 7px;
+    background: rgba(230, 169, 109, 0.6);
+    z-index: 3;
+    position: fixed;
+    cursor: pointer;
+    right: 18%;
+    margin: 10px;
+    display: none;
+}
+#menu:hover {
+    background: rgba(238, 167, 95, 0.8);
+}
+.menu span {
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 1px 1px 2px #000;
+    height: 4px;
+    width: 30px;
+    display: block;
+    margin: 4px;
+}
+.close span:first-child {
+    transform: translate(0, 8px) rotate(225deg);
+    -ms-transform: translate(0, 8px) rotate(225deg);
+    -webkit-transform: translate(0, 8px) rotate(225deg);
+}
+.close span:nth-child(2) {
+    opacity: 0;
+}
+.close span:last-child {
+    transform: translate(0, -8px) rotate(-225deg);
+    -ms-transform: translate(0, -8px) rotate(-225deg);
+    -webkit-transform: translate(0, -8px) rotate(-225deg);
+}
+#sideMenu {
+    background-color: rgba(230, 181, 126, 0.8);
+    padding-top: 20px;
+    height: 100vh;
+    width: 0px;
+    text-align: center;
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    color: #fff;
+}
+
+#sideMenu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    clear: both;
+}
+
+#sideMenu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0px;
+    display: block;
+    margin: 5px;
+}
+
+#sideMenu a:hover {
+    text-shadow: 1px 1px 8px #fff;
+    font-size: large;
+    color: aqua;
+}
+.sideShow {
+    width: 100px;
 }
 div{
     height: 220px;
@@ -24,7 +129,7 @@ div{
     position: relative;
     border-radius: 12px;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .bakeX{
     background-image: url(../images/C2.jpg)
@@ -43,6 +148,10 @@ section{
     -webkit-transition: all .5s ease-in-out 0s;
     -moz-transition: all .5s ease-in-out 0s;
     border-radius: 12px;
+    overflow: hidden;
+}
+section:hover{
+    height: 120px;
 }
 .coffeeX{
     background-image: url("../images/c11.jpg") ;
@@ -54,32 +163,37 @@ h1, h2 {
     transition: all 0.3s ease-in-out 0s;
     color: #e6b57e;
 }
-section p{
-    opacity: 0;
-}
-.show p{
-    opacity: 1;
-}
-.show section{
-    height: auto;
-}
 .price{
     float: right;
+}
+#topX{
+    color: rgba(248, 203, 152, 0.5);
+    z-index: 7;
+    background: rgba(235, 181, 126, 0.3);
+    border-radius: 7px;
+    padding: 5px 12px;
+    position: sticky;
+    font-size: 25px;
+    top: 90%;
+    margin-right: 20px;
+    float: right;
+    cursor: pointer;
+}
+#topX:hover{
+    background: rgba(235, 181, 126, 0.8);
+    top: 88%;
+    color: white;
 }
 .drinkX{
     background: none;
     height: 450px;
 }
 .drinkX img{
+    display: inline-block;
     border-radius: 12px; 
 }
 .drinkX img:last-child{
     float: right;
-}
-.drinkX::after {
-    content: "";
-    display: block;
-    clear: both;
 }
 footer{
     background-color: rgba(235, 181, 126, 0.8);

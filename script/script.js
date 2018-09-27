@@ -1,9 +1,39 @@
-var x = document.getElementById("my-div");
-var y = document.getElementById("my-div2");
+var nav = document.getElementById('mainX');
+var menu = document.getElementById('menu');
+var sideMenu = document.getElementById('sideMenu');
 
-x.onclick = function()  {
-    x.classList.toggle("show");
-};
-y.onclick = function()  {
-    y.classList.toggle("show");
-};
+function openMenu() {
+    menu.classList.toggle('close');
+    if(sideMenu.style.width === "0px") {
+        sideMenu.style.width = "100px";
+    } else {
+        sideMenu.style.width = 0;
+    }
+}
+window.onscroll = function() {
+    TopX();
+}
+
+function TopX() {
+    if (document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
+        document.getElementById('topX').style.display = "block";
+    } else {
+        document.getElementById('topX').style.display = "none";
+    }
+}
+
+function goTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+window.onscroll = function() {
+    menuX();
+}
+
+function menuX() {
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        document.getElementById('menu').style.display = "block";
+    } else {
+        document.getElementById('menu').style.display = "none";
+    }
+}
