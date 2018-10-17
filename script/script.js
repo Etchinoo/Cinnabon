@@ -2,14 +2,15 @@ var nav = document.getElementById('mainX');
 var menu = document.getElementById('menu');
 var sideMenu = document.getElementById('sideMenu');
 
-function openMenu() {
+function openMenu() {    
     menu.classList.toggle('close');
-    if(sideMenu.style.width === "0px") {
-        sideMenu.style.width = "100px";
+    if(sideMenu.style.width == "100px") {
+        sideMenu.style.width = "0px";
     } else {
-        sideMenu.style.width = 0;
+        sideMenu.style.width = "100px";
     }
 }
+
 window.onscroll = function() {
     TopX();
 }
@@ -20,20 +21,26 @@ function TopX() {
     } else {
         document.getElementById('topX').style.display = "none";
     }
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById('menu').style.display = "block";
+    } else {
+        document.getElementById('menu').style.display = "none";
+    }
 }
 
 function goTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-window.onscroll = function() {
-    menuX();
-}
 
-function menuX() {
-    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-        document.getElementById('menu').style.display = "block";
-    } else {
-        document.getElementById('menu').style.display = "none";
-    }
-}
+// window.onscroll = function() {
+//     menuX();
+// }
+
+// function menuX() {
+//     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+//         document.getElementById('menu').style.display = "block";
+//     } else {
+//         document.getElementById('menu').style.display = "none";
+//     }
+// }
